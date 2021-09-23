@@ -1,0 +1,21 @@
+[0m[[0m[31merror[0m] [0m[0m/home/s4n/Dev/eval-scala/santiagosuaza-calnatresta/src/main/scala/co/s4n/calnat/Main.scala:29:35: not found: value Sec[0m
+[0m[[0m[31merror[0m] [0m[0m        case Suc(nat)   => "Suc("+Sec.nat+")"[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/s4n/Dev/eval-scala/santiagosuaza-calnatresta/src/main/scala/co/s4n/calnat/Main.scala:33:29: nat is already defined as value nat[0m
+[0m[[0m[31merror[0m] [0m[0m        case (Suc(nat), Suc(nat)) => restaNat(nat1.nat, nat2.nat)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/s4n/Dev/eval-scala/santiagosuaza-calnatresta/src/main/scala/co/s4n/calnat/Main.scala:33:52: value nat is not a member of co.s4n.calnat.Nat[0m
+[0m[[0m[31merror[0m] [0m[0m        case (Suc(nat), Suc(nat)) => restaNat(nat1.nat, nat2.nat)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/s4n/Dev/eval-scala/santiagosuaza-calnatresta/src/main/scala/co/s4n/calnat/Main.scala:33:62: value nat is not a member of co.s4n.calnat.Nat[0m
+[0m[[0m[31merror[0m] [0m[0m        case (Suc(nat), Suc(nat)) => restaNat(nat1.nat, nat2.nat)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/s4n/Dev/eval-scala/santiagosuaza-calnatresta/src/main/scala/co/s4n/calnat/Main.scala:37:59: value nat is not a member of co.s4n.calnat.Nat[0m
+[0m[[0m[31merror[0m] [0m[0m            case Suc(snat) => new Suc(iRestaNat(biggerNat.nat))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/s4n/Dev/eval-scala/santiagosuaza-calnatresta/src/main/scala/co/s4n/calnat/Main.scala:39:5: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: co.s4n.calnat.Nat[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
