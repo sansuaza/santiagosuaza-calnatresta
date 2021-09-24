@@ -24,19 +24,23 @@ object Main extends App {
         if (i == 0) new Cero
         else new Suc(conIntANat(i-1))
     }
-    def imprimirNat(nat:Nat):String = nat match {
-        case Cero()     => "(Cero)"
-        case Suc(nat)   => "Suc("+Sec.nat+")"
+    def imprimirNat(myNat:Nat):String = myNat match {
+        case Cero()     => "Cero"
+        case Suc(natp)   => "Suc("+imprimirNat(natp)+")"
     }
-
-    def restaNat(nat1:Nat, nat2:Nat):Nat = (nat1, nat2) match {
-        case (Suc(nat), Suc(nat)) => restaNat(nat1.nat, nat2.nat)
-        case (Suc(nat), Cero()) => iRestaNat(nat1)
-        def iRestaNat(biggerNat:Nat):Nat = biggerNat match {
-            case Cero() => new Cero()
-            case Suc(snat) => new Suc(iRestaNat(biggerNat.nat))
+    def restaNat(nat1:Nat, nat2:Nat):Nat = {
+        def iRestaNat(biggerNat:Nat):Nat = {
+            biggerNat match{
+                case Cero() => new Cero()
+                case Suc(bnat) => new Suc(iRestaNat(bnat))
+            }
+        }
+        (nat1, nat2) match{
+            case (Suc(snat1), Suc(snat2)) => restaNat(snat1, snat2)
+            case (Suc(snat1), Cero()) => iRestaNat(nat1)
         }
     }
+
 
     //Aplication
     val a = leerInt("Leer primer entero ")
@@ -46,7 +50,7 @@ object Main extends App {
     val natB = conIntANat(b)
 
     if(esMayorIgual(natA, natB)){
-        imprimirNat(restaNat(natA, natB))
+        print(imprimirNat(restaNat(natA, natB)))
     }
     else print("No se puede hacer la operacion")
 }
